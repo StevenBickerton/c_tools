@@ -4,6 +4,6 @@ export SVN_HAM=svn+ssh://bick@hammer5.astro.princeton.edu/u/bick/svn
 svn export $SVN_HAM/@PRODUCT@/@VERSION@ @PRODUCT@-@VERSION@ &&
 cd @PRODUCT@-@VERSION@ &&
 setup -r . &&
-make &&
-make install BINDIR=$product_dir/bin CPPFLAGS="-I$CFITSIO_DIR/include -I$GSL_DIR/include"
+make CPPFLAGS="-I$CFITSIO_DIR/include -I$GSL_DIR/include" LDFLAGS="-L$CFITSIO_DIR/lib -L$GSL_DIR/lib" &&
+make install BINDIR=$product_dir/bin 
 
