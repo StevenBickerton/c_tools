@@ -1,3 +1,0 @@
-setupRequired(gsl >= 1.8)
-setupRequired(cfitsio >= 3.330)
-envPrepend(PATH, ${PRODUCT_DIR}/bin)
