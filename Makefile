@@ -17,8 +17,9 @@ CPPFLAGS = -I$(HOME)/usr/include -I/opt/local/include
 LDFLAGS = -L$(HOME)/usr/lib -L/opt/local/lib
 LDF =  $(LDFLAGS) -lm -lcfitsio -lgsl -lgslcblas
 
+PREFIX = ${HOME}/usr
 INSTALL = /usr/bin/install
-BINDIR = ${HOME}/usr/bin
+BINDIR = $(PREFIX)/bin
 TEST = ./test.pl
 
 BINARIES = erf nsigma bin cstats rmsSlide smoothC lombscargle \
