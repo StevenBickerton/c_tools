@@ -20,6 +20,7 @@ LDF =  $(LDFLAGS) -lm -lcfitsio -lgsl -lgslcblas
 PREFIX = ${HOME}/usr
 INSTALL = /usr/bin/install
 BINDIR = $(PREFIX)/bin
+UPSDIR = $(PREFIX)/ups
 TEST = ./test.pl
 
 BINARIES = erf nsigma bin cstats rmsSlide smoothC lombscargle \
@@ -120,6 +121,9 @@ clean:
 
 install:
 	$(INSTALL) $(BINARIES) $(BINDIR)
+	$(INSTALL) -d $(UPSDIR)
+	$(INSTALL) ups/cAnalysis.* $(UPSDIR)
 
 uninstall:
 	cd $(BINDIR); $(RM) $(BINARIES); cd -
+	cd $(PREFIX); $(RM) -rf ups; cd-
