@@ -1,0 +1,4 @@
+setupRequired(gsl >= 1.15)
+setupRequired(cfitsio >= 3.330)
+
+envPrepend(BIN, ${PRODUCT_DIR}/bin)

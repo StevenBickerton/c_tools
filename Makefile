@@ -14,8 +14,7 @@ OBJS = $(UOBJS) libstats.o
 
 CFLAGS =  -g -Wall -O3 -std=c99
 CPPFLAGS = -I$(HOME)/usr/include -I/opt/local/include
-LDFLAGS = -L$(HOME)/usr/lib -L/opt/local/lib \
-	-lm -lcfitsio -lgsl -lgslcblas
+LDFLAGS += -lm -lcfitsio -lgsl -lgslcblas
 
 INSTALL = /usr/bin/install
 BINDIR = ${HOME}/usr/bin
