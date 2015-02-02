@@ -1,0 +1,18 @@
+
+
+Installation
+-----------------
+
+Dependencies:
+
+- gsl
+- cfitsio
+
+Build:
+
+$ make
+
+Install (will install into ~/usr/bin/):
+
+$ make install
+
